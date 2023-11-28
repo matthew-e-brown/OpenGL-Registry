@@ -626,7 +626,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0506" name="GL_INVALID_FRAMEBUFFER_OPERATION" group="ErrorCode"/>
         <enum value="0x0506" name="GL_INVALID_FRAMEBUFFER_OPERATION_EXT" group="ErrorCode"/>
         <enum value="0x0506" name="GL_INVALID_FRAMEBUFFER_OPERATION_OES" group="ErrorCode"/>
-        <enum value="0x0507" name="GL_CONTEXT_LOST"/>
+        <enum value="0x0507" name="GL_CONTEXT_LOST" group="ErrorCode"/>
         <enum value="0x0507" name="GL_CONTEXT_LOST_KHR"/>
             <unused start="0x0508" end="0x05FF" comment="Unused for ErrorCode"/>
         <enum value="0x0600" name="GL_2D" group="FeedbackType"/>
@@ -2070,7 +2070,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8251" name="GL_DEBUG_TYPE_OTHER" group="DebugType"/>
         <enum value="0x8251" name="GL_DEBUG_TYPE_OTHER_ARB"/>
         <enum value="0x8251" name="GL_DEBUG_TYPE_OTHER_KHR"/>
-        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET"/>
+        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET" group="ResetNotificationStrategy"/>
         <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_ARB"/>
         <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_EXT"/>
         <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_KHR"/>
@@ -2086,7 +2086,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_ARB"/>
         <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_EXT"/>
         <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_KHR"/>
-        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY"/>
+        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY" group="GetPName"/>
         <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_ARB"/>
         <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_EXT"/>
         <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_KHR"/>
@@ -2118,7 +2118,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8260" name="GL_UNDEFINED_VERTEX"/>
         <enum value="0x8260" name="GL_UNDEFINED_VERTEX_EXT"/>
         <enum value="0x8260" name="GL_UNDEFINED_VERTEX_OES"/>
-        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION"/>
+        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION" group="ResetNotificationStrategy"/>
         <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_ARB"/>
         <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_EXT"/>
         <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_KHR"/>
