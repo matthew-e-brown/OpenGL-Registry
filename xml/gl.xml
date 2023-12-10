@@ -930,16 +930,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0DF3" name="GL_SELECTION_BUFFER_POINTER" group="GetPointervPName"/>
         <enum value="0x0DF4" name="GL_SELECTION_BUFFER_SIZE" group="GetPName"/>
             <unused start="0x0DF5" end="0xFFFF" comment="Unused for GetPName"/>
-        <enum value="0x1000" name="GL_TEXTURE_WIDTH" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1001" name="GL_TEXTURE_HEIGHT" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1003" name="GL_TEXTURE_INTERNAL_FORMAT" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1003" name="GL_TEXTURE_COMPONENTS" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x1000" name="GL_TEXTURE_WIDTH" group="GetTextureLevelParameter"/>
+        <enum value="0x1001" name="GL_TEXTURE_HEIGHT" group="GetTextureLevelParameter"/>
+        <enum value="0x1003" name="GL_TEXTURE_INTERNAL_FORMAT" group="GetTextureLevelParameter"/>
+        <enum value="0x1003" name="GL_TEXTURE_COMPONENTS" group="GetTextureLevelParameter"/>
         <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR" group="SamplerParameterF,GetTextureParameter,TextureParameterName"/>
         <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_EXT"/>
         <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_NV" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_OES"/>
-        <enum value="0x1005" name="GL_TEXTURE_BORDER" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1006" name="GL_TEXTURE_TARGET"/>
+        <enum value="0x1005" name="GL_TEXTURE_BORDER" group="TextureParameterName,GetTextureParameter,GetTextureLevelParameter"/>
+        <enum value="0x1006" name="GL_TEXTURE_TARGET" group="GetTextureParameter"/>
             <unused start="0x1007" end="0x10FF" comment="Unused for GetTextureParameter"/>
         <enum value="0x1100" name="GL_DONT_CARE" group="DebugSeverity,HintMode,DebugSource,DebugType"/>
         <enum value="0x1101" name="GL_FASTEST" group="HintMode"/>
@@ -1086,11 +1086,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2401" name="GL_OBJECT_LINEAR_NV"/>
         <enum value="0x2402" name="GL_SPHERE_MAP" group="TextureGenMode"/>
             <unused start="0x2403" end="0x24FF" comment="Unused for TextureGenMode"/>
-        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE" group="TextureGenParameter"/>
-        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE_OES" group="TextureGenParameter"/>
-        <enum value="0x2501" name="GL_OBJECT_PLANE" group="TextureGenParameter"/>
-        <enum value="0x2502" name="GL_EYE_PLANE" group="TextureGenParameter"/>
-            <unused start="0x2503" end="0x25FF" comment="Unused for TextureGenParameter"/>
+        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE" group="TextureGenParameterName"/>
+        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE_OES" group="TextureGenParameterName"/>
+        <enum value="0x2501" name="GL_OBJECT_PLANE" group="TextureGenParameterName"/>
+        <enum value="0x2502" name="GL_EYE_PLANE" group="TextureGenParameterName"/>
+            <unused start="0x2503" end="0x25FF" comment="Unused for TextureGenParameterName"/>
         <enum value="0x2600" name="GL_NEAREST" group="BlitFramebufferFilter,TextureMagFilter,TextureMinFilter"/>
         <enum value="0x2601" name="GL_LINEAR" group="BlitFramebufferFilter,FogMode,TextureMagFilter,TextureMinFilter"/>
             <unused start="0x2602" end="0x26FF" comment="Unused for TextureMagFilter"/>
@@ -1374,17 +1374,17 @@ typedef unsigned int GLhandleARB;
         <enum value="0x805A" name="GL_RGBA12_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x805B" name="GL_RGBA16" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x805B" name="GL_RGBA16_EXT" group="InternalFormat,SizedInternalFormat"/>
-        <enum value="0x805C" name="GL_TEXTURE_RED_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x805C" name="GL_TEXTURE_RED_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x805C" name="GL_TEXTURE_RED_SIZE_EXT"/>
-        <enum value="0x805D" name="GL_TEXTURE_GREEN_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x805D" name="GL_TEXTURE_GREEN_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x805D" name="GL_TEXTURE_GREEN_SIZE_EXT"/>
-        <enum value="0x805E" name="GL_TEXTURE_BLUE_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x805E" name="GL_TEXTURE_BLUE_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x805E" name="GL_TEXTURE_BLUE_SIZE_EXT"/>
-        <enum value="0x805F" name="GL_TEXTURE_ALPHA_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x805F" name="GL_TEXTURE_ALPHA_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x805F" name="GL_TEXTURE_ALPHA_SIZE_EXT"/>
-        <enum value="0x8060" name="GL_TEXTURE_LUMINANCE_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x8060" name="GL_TEXTURE_LUMINANCE_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x8060" name="GL_TEXTURE_LUMINANCE_SIZE_EXT"/>
-        <enum value="0x8061" name="GL_TEXTURE_INTENSITY_SIZE" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x8061" name="GL_TEXTURE_INTENSITY_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x8061" name="GL_TEXTURE_INTENSITY_SIZE_EXT"/>
         <enum value="0x8062" name="GL_REPLACE_EXT" group="TextureEnvMode"/>
         <enum value="0x8063" name="GL_PROXY_TEXTURE_1D" group="TextureTarget"/>
@@ -1417,11 +1417,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x806F" name="GL_TEXTURE_3D_OES" group="TextureTarget"/>
         <enum value="0x8070" name="GL_PROXY_TEXTURE_3D" group="TextureTarget"/>
         <enum value="0x8070" name="GL_PROXY_TEXTURE_3D_EXT" group="TextureTarget"/>
-        <enum value="0x8071" name="GL_TEXTURE_DEPTH"/>
-        <enum value="0x8071" name="GL_TEXTURE_DEPTH_EXT" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x8072" name="GL_TEXTURE_WRAP_R" group="SamplerParameterI,TextureParameterName"/>
+        <enum value="0x8071" name="GL_TEXTURE_DEPTH" group="GetTextureLevelParameter"/>
+        <enum value="0x8071" name="GL_TEXTURE_DEPTH_EXT" group="GetTextureLevelParameter"/>
+        <enum value="0x8072" name="GL_TEXTURE_WRAP_R" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
         <enum value="0x8072" name="GL_TEXTURE_WRAP_R_EXT" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x8072" name="GL_TEXTURE_WRAP_R_OES" group="TextureParameterName"/>
+        <enum value="0x8072" name="GL_TEXTURE_WRAP_R_OES" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_EXT" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_OES"/>
@@ -1718,13 +1718,13 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8137" name="GL_TEXTURE_WRAP_Q_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8138" name="GL_MAX_4D_TEXTURE_SIZE_SGIS" group="GetPName"/>
         <enum value="0x8139" name="GL_PIXEL_TEX_GEN_SGIX" group="GetPName,EnableCap"/>
-        <enum value="0x813A" name="GL_TEXTURE_MIN_LOD" group="SamplerParameterF,TextureParameterName"/>
+        <enum value="0x813A" name="GL_TEXTURE_MIN_LOD" group="SamplerParameterF,TextureParameterName,GetTextureParameter"/>
         <enum value="0x813A" name="GL_TEXTURE_MIN_LOD_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x813B" name="GL_TEXTURE_MAX_LOD" group="SamplerParameterF,TextureParameterName"/>
+        <enum value="0x813B" name="GL_TEXTURE_MAX_LOD" group="SamplerParameterF,TextureParameterName,GetTextureParameter"/>
         <enum value="0x813B" name="GL_TEXTURE_MAX_LOD_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x813C" name="GL_TEXTURE_BASE_LEVEL" group="TextureParameterName"/>
+        <enum value="0x813C" name="GL_TEXTURE_BASE_LEVEL" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813C" name="GL_TEXTURE_BASE_LEVEL_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x813D" name="GL_TEXTURE_MAX_LEVEL" group="TextureParameterName"/>
+        <enum value="0x813D" name="GL_TEXTURE_MAX_LEVEL" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813D" name="GL_TEXTURE_MAX_LEVEL_APPLE"/>
         <enum value="0x813D" name="GL_TEXTURE_MAX_LEVEL_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813E" name="GL_PIXEL_TILE_BEST_ALIGNMENT_SGIX" group="GetPName"/>
@@ -1813,7 +1813,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x818E" name="GL_TEXTURE_LOD_BIAS_S_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x818F" name="GL_TEXTURE_LOD_BIAS_T_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8190" name="GL_TEXTURE_LOD_BIAS_R_SGIX" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x8191" name="GL_GENERATE_MIPMAP" group="InternalFormatPName,TextureParameterName"/>
+        <enum value="0x8191" name="GL_GENERATE_MIPMAP" group="InternalFormatPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x8191" name="GL_GENERATE_MIPMAP_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8192" name="GL_GENERATE_MIPMAP_HINT" group="HintTarget"/>
         <enum value="0x8192" name="GL_GENERATE_MIPMAP_HINT_SGIS" group="HintTarget,GetPName"/>
@@ -1931,10 +1931,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x81F1" name="GL_OBJECT_DISTANCE_TO_POINT_SGIS" group="TextureGenMode"/>
         <enum value="0x81F2" name="GL_EYE_DISTANCE_TO_LINE_SGIS" group="TextureGenMode"/>
         <enum value="0x81F3" name="GL_OBJECT_DISTANCE_TO_LINE_SGIS" group="TextureGenMode"/>
-        <enum value="0x81F4" name="GL_EYE_POINT_SGIS" group="TextureGenParameter"/>
-        <enum value="0x81F5" name="GL_OBJECT_POINT_SGIS" group="TextureGenParameter"/>
-        <enum value="0x81F6" name="GL_EYE_LINE_SGIS" group="TextureGenParameter"/>
-        <enum value="0x81F7" name="GL_OBJECT_LINE_SGIS" group="TextureGenParameter"/>
+        <enum value="0x81F4" name="GL_EYE_POINT_SGIS" group="TextureGenParameterName"/>
+        <enum value="0x81F5" name="GL_OBJECT_POINT_SGIS" group="TextureGenParameterName"/>
+        <enum value="0x81F6" name="GL_EYE_LINE_SGIS" group="TextureGenParameterName"/>
+        <enum value="0x81F7" name="GL_OBJECT_LINE_SGIS" group="TextureGenParameterName"/>
         <enum value="0x81F8" name="GL_LIGHT_MODEL_COLOR_CONTROL" group="LightModelParameter,GetPName"/>
         <enum value="0x81F8" name="GL_LIGHT_MODEL_COLOR_CONTROL_EXT" group="LightModelParameter"/>
         <enum value="0x81F9" name="GL_SINGLE_COLOR" group="LightModelColorControl"/>
@@ -2252,19 +2252,19 @@ typedef unsigned int GLhandleARB;
         <enum value="0x82D8" name="GL_VERTEX_BINDING_STRIDE" group="GetPName"/>
         <enum value="0x82D9" name="GL_MAX_VERTEX_ATTRIB_RELATIVE_OFFSET" group="GetPName"/>
         <enum value="0x82DA" name="GL_MAX_VERTEX_ATTRIB_BINDINGS" group="GetPName"/>
-        <enum value="0x82DB" name="GL_TEXTURE_VIEW_MIN_LEVEL"/>
+        <enum value="0x82DB" name="GL_TEXTURE_VIEW_MIN_LEVEL" group="GetTextureParameter"/>
         <enum value="0x82DB" name="GL_TEXTURE_VIEW_MIN_LEVEL_EXT"/>
         <enum value="0x82DB" name="GL_TEXTURE_VIEW_MIN_LEVEL_OES"/>
-        <enum value="0x82DC" name="GL_TEXTURE_VIEW_NUM_LEVELS"/>
+        <enum value="0x82DC" name="GL_TEXTURE_VIEW_NUM_LEVELS" group="GetTextureParameter"/>
         <enum value="0x82DC" name="GL_TEXTURE_VIEW_NUM_LEVELS_EXT"/>
         <enum value="0x82DC" name="GL_TEXTURE_VIEW_NUM_LEVELS_OES"/>
-        <enum value="0x82DD" name="GL_TEXTURE_VIEW_MIN_LAYER"/>
+        <enum value="0x82DD" name="GL_TEXTURE_VIEW_MIN_LAYER" group="GetTextureParameter"/>
         <enum value="0x82DD" name="GL_TEXTURE_VIEW_MIN_LAYER_EXT"/>
         <enum value="0x82DD" name="GL_TEXTURE_VIEW_MIN_LAYER_OES"/>
-        <enum value="0x82DE" name="GL_TEXTURE_VIEW_NUM_LAYERS"/>
+        <enum value="0x82DE" name="GL_TEXTURE_VIEW_NUM_LAYERS" group="GetTextureParameter"/>
         <enum value="0x82DE" name="GL_TEXTURE_VIEW_NUM_LAYERS_EXT"/>
         <enum value="0x82DE" name="GL_TEXTURE_VIEW_NUM_LAYERS_OES"/>
-        <enum value="0x82DF" name="GL_TEXTURE_IMMUTABLE_LEVELS"/>
+        <enum value="0x82DF" name="GL_TEXTURE_IMMUTABLE_LEVELS" group="GetTextureParameter"/>
         <enum value="0x82E0" name="GL_BUFFER" group="ObjectIdentifier"/>
         <enum value="0x82E0" name="GL_BUFFER_KHR"/>
         <enum value="0x82E1" name="GL_SHADER" group="ObjectIdentifier"/>
@@ -2806,7 +2806,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x84FF" name="GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_MAX_TEXTURE_MAX_ANISOTROPY"/>
         <enum value="0x8500" name="GL_TEXTURE_FILTER_CONTROL" group="TextureEnvTarget"/>
         <enum value="0x8500" name="GL_TEXTURE_FILTER_CONTROL_EXT"/>
-        <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS" group="TextureParameterName,SamplerParameterF,TextureEnvParameter"/>
+        <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS" group="TextureParameterName,GetTextureParameter,SamplerParameterF,TextureEnvParameter"/>
         <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS_EXT"/>
         <enum value="0x8502" name="GL_MODELVIEW1_STACK_DEPTH_EXT"/>
         <enum value="0x8503" name="GL_COMBINE4_NV"/>
@@ -2828,16 +2828,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x850E" name="GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT"/>
         <enum value="0x850F" name="GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT"/>
         <enum value="0x8510" name="GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP" group="GetTextureParameter"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_ARB" group="GetTextureParameter"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_EXT" group="GetTextureParameter"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_NV" group="GetTextureParameter"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_OES" group="GetTextureParameter"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP" group="GetTextureParameter"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_ARB" group="GetTextureParameter"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_EXT" group="GetTextureParameter"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_NV" group="GetTextureParameter"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_OES" group="GetTextureParameter"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP" group="TextureGenMode"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_ARB" group="TextureGenMode"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_EXT" group="TextureGenMode"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_NV" group="TextureGenMode"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_OES" group="TextureGenMode"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP" group="TextureGenMode"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_ARB" group="TextureGenMode"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_EXT" group="TextureGenMode"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_NV" group="TextureGenMode"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_OES" group="TextureGenMode"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB" group="TextureTarget,EnableCap"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT" group="TextureTarget,EnableCap"/>
@@ -3290,7 +3290,7 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x86A0" end="0x86AF" vendor="ARB">
         <enum value="0x86A0" name="GL_TEXTURE_COMPRESSED_IMAGE_SIZE"/>
         <enum value="0x86A0" name="GL_TEXTURE_COMPRESSED_IMAGE_SIZE_ARB"/>
-        <enum value="0x86A1" name="GL_TEXTURE_COMPRESSED" group="InternalFormatPName"/>
+        <enum value="0x86A1" name="GL_TEXTURE_COMPRESSED" group="InternalFormatPName,GetTextureLevelParameter"/>
         <enum value="0x86A1" name="GL_TEXTURE_COMPRESSED_ARB"/>
         <enum value="0x86A2" name="GL_NUM_COMPRESSED_TEXTURE_FORMATS" group="GetPName"/>
         <enum value="0x86A2" name="GL_NUM_COMPRESSED_TEXTURE_FORMATS_ARB"/>
@@ -3865,14 +3865,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8848" name="GL_MATRIX_INDEX_ARRAY_STRIDE_OES"/>
         <enum value="0x8849" name="GL_MATRIX_INDEX_ARRAY_POINTER_ARB"/>
         <enum value="0x8849" name="GL_MATRIX_INDEX_ARRAY_POINTER_OES"/>
-        <enum value="0x884A" name="GL_TEXTURE_DEPTH_SIZE"/>
+        <enum value="0x884A" name="GL_TEXTURE_DEPTH_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x884A" name="GL_TEXTURE_DEPTH_SIZE_ARB"/>
-        <enum value="0x884B" name="GL_DEPTH_TEXTURE_MODE"/>
+        <enum value="0x884B" name="GL_DEPTH_TEXTURE_MODE" group="GetTextureParameter"/>
         <enum value="0x884B" name="GL_DEPTH_TEXTURE_MODE_ARB"/>
-        <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE" group="SamplerParameterI,TextureParameterName"/>
+        <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
         <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE_ARB"/>
         <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE_EXT"/>
-        <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC" group="SamplerParameterI,TextureParameterName"/>
+        <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
         <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC_ARB"/>
         <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC_EXT"/>
         <enum value="0x884E" name="GL_COMPARE_R_TO_TEXTURE" group="TextureCompareMode"/>
@@ -4126,7 +4126,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_OES" group="InternalFormat,SizedInternalFormat"/>
-        <enum value="0x88F1" name="GL_TEXTURE_STENCIL_SIZE"/>
+        <enum value="0x88F1" name="GL_TEXTURE_STENCIL_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x88F1" name="GL_TEXTURE_STENCIL_SIZE_EXT"/>
         <enum value="0x88F2" name="GL_STENCIL_TAG_BITS_EXT"/>
         <enum value="0x88F3" name="GL_STENCIL_CLEAR_TAG_VALUE_EXT"/>
@@ -4624,19 +4624,19 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8C10" end="0x8C8F" vendor="NV" comment="For Pat Brown">
-        <enum value="0x8C10" name="GL_TEXTURE_RED_TYPE"/>
+        <enum value="0x8C10" name="GL_TEXTURE_RED_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C10" name="GL_TEXTURE_RED_TYPE_ARB"/>
-        <enum value="0x8C11" name="GL_TEXTURE_GREEN_TYPE"/>
+        <enum value="0x8C11" name="GL_TEXTURE_GREEN_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C11" name="GL_TEXTURE_GREEN_TYPE_ARB"/>
-        <enum value="0x8C12" name="GL_TEXTURE_BLUE_TYPE"/>
+        <enum value="0x8C12" name="GL_TEXTURE_BLUE_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C12" name="GL_TEXTURE_BLUE_TYPE_ARB"/>
-        <enum value="0x8C13" name="GL_TEXTURE_ALPHA_TYPE"/>
+        <enum value="0x8C13" name="GL_TEXTURE_ALPHA_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C13" name="GL_TEXTURE_ALPHA_TYPE_ARB"/>
-        <enum value="0x8C14" name="GL_TEXTURE_LUMINANCE_TYPE"/>
+        <enum value="0x8C14" name="GL_TEXTURE_LUMINANCE_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C14" name="GL_TEXTURE_LUMINANCE_TYPE_ARB"/>
-        <enum value="0x8C15" name="GL_TEXTURE_INTENSITY_TYPE"/>
+        <enum value="0x8C15" name="GL_TEXTURE_INTENSITY_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C15" name="GL_TEXTURE_INTENSITY_TYPE_ARB"/>
-        <enum value="0x8C16" name="GL_TEXTURE_DEPTH_TYPE"/>
+        <enum value="0x8C16" name="GL_TEXTURE_DEPTH_TYPE" group="GetTextureLevelParameter"/>
         <enum value="0x8C16" name="GL_TEXTURE_DEPTH_TYPE_ARB"/>
         <enum value="0x8C17" name="GL_UNSIGNED_NORMALIZED"/>
         <enum value="0x8C17" name="GL_UNSIGNED_NORMALIZED_ARB"/>
@@ -4676,7 +4676,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C2C" name="GL_TEXTURE_BINDING_BUFFER_ARB"/>
         <enum value="0x8C2C" name="GL_TEXTURE_BINDING_BUFFER_EXT"/>
         <enum value="0x8C2C" name="GL_TEXTURE_BINDING_BUFFER_OES"/>
-        <enum value="0x8C2D" name="GL_TEXTURE_BUFFER_DATA_STORE_BINDING"/>
+        <enum value="0x8C2D" name="GL_TEXTURE_BUFFER_DATA_STORE_BINDING" group="GetTextureLevelParameter"/>
         <enum value="0x8C2D" name="GL_TEXTURE_BUFFER_DATA_STORE_BINDING_ARB"/>
         <enum value="0x8C2D" name="GL_TEXTURE_BUFFER_DATA_STORE_BINDING_EXT"/>
         <enum value="0x8C2D" name="GL_TEXTURE_BUFFER_DATA_STORE_BINDING_OES"/>
@@ -4705,7 +4705,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV" group="PixelType"/>
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV_APPLE" group="PixelType"/>
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV_EXT" group="PixelType"/>
-        <enum value="0x8C3F" name="GL_TEXTURE_SHARED_SIZE"/>
+        <enum value="0x8C3F" name="GL_TEXTURE_SHARED_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x8C3F" name="GL_TEXTURE_SHARED_SIZE_EXT"/>
         <enum value="0x8C40" name="GL_SRGB" group="InternalFormat"/>
         <enum value="0x8C40" name="GL_SRGB_EXT" group="InternalFormat"/>
@@ -5338,15 +5338,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E2E" name="GL_TRANSPOSE_PROGRAM_MATRIX_EXT"/>
         <enum value="0x8E2F" name="GL_PROGRAM_MATRIX_STACK_DEPTH_EXT"/>
             <unused start="0x8E30" end="0x8E41" vendor="NV"/>
-        <enum value="0x8E42" name="GL_TEXTURE_SWIZZLE_R" group="TextureParameterName"/>
+        <enum value="0x8E42" name="GL_TEXTURE_SWIZZLE_R" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8E42" name="GL_TEXTURE_SWIZZLE_R_EXT"/>
-        <enum value="0x8E43" name="GL_TEXTURE_SWIZZLE_G" group="TextureParameterName"/>
+        <enum value="0x8E43" name="GL_TEXTURE_SWIZZLE_G" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8E43" name="GL_TEXTURE_SWIZZLE_G_EXT"/>
-        <enum value="0x8E44" name="GL_TEXTURE_SWIZZLE_B" group="TextureParameterName"/>
+        <enum value="0x8E44" name="GL_TEXTURE_SWIZZLE_B" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8E44" name="GL_TEXTURE_SWIZZLE_B_EXT"/>
-        <enum value="0x8E45" name="GL_TEXTURE_SWIZZLE_A" group="TextureParameterName"/>
+        <enum value="0x8E45" name="GL_TEXTURE_SWIZZLE_A" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8E45" name="GL_TEXTURE_SWIZZLE_A_EXT"/>
-        <enum value="0x8E46" name="GL_TEXTURE_SWIZZLE_RGBA" group="TextureParameterName"/>
+        <enum value="0x8E46" name="GL_TEXTURE_SWIZZLE_RGBA" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8E46" name="GL_TEXTURE_SWIZZLE_RGBA_EXT"/>
         <enum value="0x8E47" name="GL_ACTIVE_SUBROUTINE_UNIFORM_LOCATIONS" group="ProgramStagePName"/>
         <enum value="0x8E48" name="GL_ACTIVE_SUBROUTINE_MAX_LENGTH" group="ProgramStagePName"/>
@@ -5978,7 +5978,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x90BE" name="GL_PATH_STENCIL_DEPTH_OFFSET_UNITS_NV"/>
         <enum value="0x90BF" name="GL_PATH_COVER_DEPTH_FUNC_NV"/>
             <unused start="0x90C0" end="0x90C6" vendor="NV"/>
-        <enum value="0x90C7" name="GL_IMAGE_FORMAT_COMPATIBILITY_TYPE" group="InternalFormatPName"/>
+        <enum value="0x90C7" name="GL_IMAGE_FORMAT_COMPATIBILITY_TYPE" group="InternalFormatPName,GetTextureParameter"/>
         <enum value="0x90C8" name="GL_IMAGE_FORMAT_COMPATIBILITY_BY_SIZE"/>
         <enum value="0x90C9" name="GL_IMAGE_FORMAT_COMPATIBILITY_BY_CLASS"/>
         <enum value="0x90CA" name="GL_MAX_VERTEX_IMAGE_UNIFORMS"/>
@@ -6018,7 +6018,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x90E0" vendor="NV"/>
         <enum value="0x90E1" name="GL_SYNC_X11_FENCE_EXT"/>
             <unused start="0x90E2" end="0x90E9" vendor="NV"/>
-        <enum value="0x90EA" name="GL_DEPTH_STENCIL_TEXTURE_MODE" group="TextureParameterName"/>
+        <enum value="0x90EA" name="GL_DEPTH_STENCIL_TEXTURE_MODE" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x90EB" name="GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS" group="GetPName"/>
         <enum value="0x90EB" name="GL_MAX_COMPUTE_FIXED_GROUP_INVOCATIONS_ARB" alias="GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS"/>
         <enum value="0x90EC" name="GL_UNIFORM_BLOCK_REFERENCED_BY_COMPUTE_SHADER" group="UniformBlockPName"/>
@@ -6046,8 +6046,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9104" name="GL_TEXTURE_BINDING_2D_MULTISAMPLE" group="GetPName"/>
         <enum value="0x9105" name="GL_TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY" group="GetPName"/>
         <enum value="0x9105" name="GL_TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY_OES"/>
-        <enum value="0x9106" name="GL_TEXTURE_SAMPLES"/>
-        <enum value="0x9107" name="GL_TEXTURE_FIXED_SAMPLE_LOCATIONS"/>
+        <enum value="0x9106" name="GL_TEXTURE_SAMPLES" group="GetTextureLevelParameter"/>
+        <enum value="0x9107" name="GL_TEXTURE_FIXED_SAMPLE_LOCATIONS" group="GetTextureLevelParameter"/>
         <enum value="0x9108" name="GL_SAMPLER_2D_MULTISAMPLE" group="AttributeType,UniformType"/>
         <enum value="0x9109" name="GL_INT_SAMPLER_2D_MULTISAMPLE" group="AttributeType,UniformType"/>
         <enum value="0x910A" name="GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE" group="AttributeType,UniformType"/>
@@ -6106,8 +6106,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x912C" name="GL_PACK_COMPRESSED_BLOCK_HEIGHT"/>
         <enum value="0x912D" name="GL_PACK_COMPRESSED_BLOCK_DEPTH"/>
         <enum value="0x912E" name="GL_PACK_COMPRESSED_BLOCK_SIZE"/>
-        <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT"/>
-        <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT_EXT"/>
+        <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT" group="GetTextureParameter"/>
+        <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT_EXT" group="GetTextureParameter"/>
     </enums>
 
     <enums namespace="GL" start="0x9130" end="0x913F" vendor="IMG" comment="Khronos bug 882">
@@ -6199,10 +6199,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x919A" name="GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS_EXT"/>
         <enum value="0x919B" name="GL_MIN_SPARSE_LEVEL_AMD"/>
         <enum value="0x919C" name="GL_MIN_LOD_WARNING_AMD"/>
-        <enum value="0x919D" name="GL_TEXTURE_BUFFER_OFFSET"/>
+        <enum value="0x919D" name="GL_TEXTURE_BUFFER_OFFSET" group="GetTextureLevelParameter"/>
         <enum value="0x919D" name="GL_TEXTURE_BUFFER_OFFSET_EXT"/>
         <enum value="0x919D" name="GL_TEXTURE_BUFFER_OFFSET_OES"/>
-        <enum value="0x919E" name="GL_TEXTURE_BUFFER_SIZE"/>
+        <enum value="0x919E" name="GL_TEXTURE_BUFFER_SIZE" group="GetTextureLevelParameter"/>
         <enum value="0x919E" name="GL_TEXTURE_BUFFER_SIZE_EXT"/>
         <enum value="0x919E" name="GL_TEXTURE_BUFFER_SIZE_OES"/>
         <enum value="0x919F" name="GL_TEXTURE_BUFFER_OFFSET_ALIGNMENT" group="GetPName"/>
@@ -7641,7 +7641,7 @@ typedef unsigned int GLhandleARB;
             <proto><ptype>GLuint</ptype> <name>glBindTexGenParameterEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>unit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>value</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>value</name></param>
         </command>
         <command>
             <proto>void <name>glBindTexture</name></proto>
@@ -14113,21 +14113,21 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetMultiTexGendvEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetMultiTexGenfvEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetMultiTexGenivEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -15313,40 +15313,40 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTexGendv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
             <glx type="single" opcode="132"/>
         </command>
         <command>
             <proto>void <name>glGetTexGenfv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="133"/>
         </command>
         <command>
             <proto>void <name>glGetTexGenfvOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetTexGeniv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="134"/>
         </command>
         <command>
             <proto>void <name>glGetTexGenivOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetTexGenxvOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -15363,7 +15363,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTexLevelParameterfv</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="138"/>
         </command>
@@ -15371,7 +15371,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTexLevelParameteriv</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="139"/>
         </command>
@@ -15379,7 +15379,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTexLevelParameterxvOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -15491,7 +15491,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTextureLevelParameterfv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -15499,14 +15499,14 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetTextureLevelParameteriv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -15514,7 +15514,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetTextureLevelParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -18858,7 +18858,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexGendEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLdouble</ptype> <name>param</name></param>
             <vecequiv name="glMultiTexGendvEXT"/>
         </command>
@@ -18866,14 +18866,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexGendvEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glMultiTexGenfEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
             <vecequiv name="glMultiTexGenfvEXT"/>
         </command>
@@ -18881,14 +18881,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexGenfvEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glMultiTexGeniEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
             <vecequiv name="glMultiTexGenivEXT"/>
         </command>
@@ -18896,7 +18896,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexGenivEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -24357,79 +24357,79 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexGend</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLdouble</ptype> <name>param</name></param>
             <glx type="render" opcode="115"/>
         </command>
         <command>
             <proto>void <name>glTexGendv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLdouble</ptype> *<name>params</name></param>
             <glx type="render" opcode="116"/>
         </command>
         <command>
             <proto>void <name>glTexGenf</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="117"/>
         </command>
         <command>
             <proto>void <name>glTexGenfOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glTexGenfv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="118"/>
         </command>
         <command>
             <proto>void <name>glTexGenfvOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTexGeni</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="119"/>
         </command>
         <command>
             <proto>void <name>glTexGeniOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glTexGeniv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="120"/>
         </command>
         <command>
             <proto>void <name>glTexGenivOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTexGenxOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfixed</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glTexGenxvOES</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
-            <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="TextureGenParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
